@@ -1,0 +1,12 @@
+<company>
+    <department id="1">
+        <name>HR人力资源部</name>
+    </department>
+    <department id="2">
+        <name>Market市场部</name>
+        <manager>何其能</manager>
+    </department>
+    <department id="3">
+        <name>Tech技术部</name>
+    </department>
+</company>

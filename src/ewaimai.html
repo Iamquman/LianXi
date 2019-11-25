@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e_waimai</title>
+    <script type="text/javascript">
+        alert("I am here!");
+        function bclick(e){
+            alert("乱点!");
+            console.log("有人点了按钮");
+            console.log(e.name);
+        }
+    </script>
+</head>
+<body>
+<div ><font  color="#EEAAFF"> e_waimai</font></div>
+
+<input type="button" name="ok" value="按钮" onclick="bclick(this)"/>
+</body>
+</html>
