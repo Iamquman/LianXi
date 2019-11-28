@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级抽奖</title>
+    <script type="text/javascript">
+    var tmr;  //定时器，用于呈现动态抽奖
+    bst dy=0;  //状态变量，0的时候初始，1的时候
+    int n; //总人数
+    int x; //中奖人数
+    function setT(){
+        tmr=setInterval(show,200);
+    }
+    function stopT(){}
+
+    function show(){
+        var n=Number(document.getElementById("total").value);
+        var x=Number(document.getElementById("bonus").value);
+        var r=document.getElementById("x");
+        r.value=randRange(1,n+1);
+    }
+    function lott(){
+        stopT();
+        x-=1;
+        addMsg();
+        var r=document.geElementById("x");
+        addMsg(r.value);
+        set
+
+    }
+
+
+        function randRange(x,y){
+            var r=Math.random();
+            return Math.floor(r*(y-x)+x);    <!--floor:取整  ； -->
+        }
+        function start(){
+        if(st==0){
+             n=Number(document.getElementById("total").value);
+             x=Number(document.getElementById("bonus").value);
+            addMsg("在"+n+"个人中抽取："+x+"个获奖者");
+            var t=randRange(1,n+1);
+            addMsg("例如:"+t);
+        }
+        function addMsg(msg){
+            var m=document.getElementById("result");
+            if(m.value=""){
+                m.value=msg;
+            }
+        }
+        setT();
+        }
+
+    </script>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>设定总人数</td>
+            <td><input id="total" type="number" value="33" min="0" max="40"/></td>
+        </tr>
+        <tr>
+            <td>饮料总数量</td>
+            <td><input id="bonus" type="numbr" name="" value="3" min="3" max="15" /></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="x" value="0" readonly="true"/></td>
+            <td><input type="button"value="开始抽奖" onclick="start()"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea id="result" style="overflow:scroll;overflow-x:hidden;height:64"></textarea></td>       <!--一个格跨越两列：colspan-->
+        </tr>
+    </table>
+</form>
+</body>
+</html>
