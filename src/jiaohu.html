@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态打招呼</title>
+
+   <!-- <script type="text/javascript">
+        var msgs=["屎铁汪","雷猴","213"];
+        var t;
+        var i=0;
+        function sayHello(){
+            var p=document.getElementById('msghello');
+
+               i=parseInt(Math.random()*3+1);
+                p.innerText=msgs[i];
+          i=++i%3;-->
+     <!--   function setColor(){
+        var c=document.getElementById('msghello');
+        var color="#AABBCC|#BBDDAA|#FFAACC";
+        color=color.split("|");
+        c.style.color=color[parseInt(Math.random()*color.length)];
+
+        }
+    </script>-->
+    <script>
+    function setColor(){
+    var c=document.getElementById('msgHello');
+    var color="#AABBCC|#BBDDAA|#FFAACC";
+    color=color.split("|");
+    c.style.color=color[parseInt(Math.random()*color.length)];
+    }
+        function begin(){
+        t=setInterval(setColor,1);
+        }
+        function end(){
+        clearInterval(sayHello);
+        }
+
+    </script>
+</head>
+<body>
+<p id="msgHello">抽奖</p>
+<input type="button" value="开8始" onclick="begin()">
+<input type="button" value="结束" onclick="end()">
+</body>
+</html>
